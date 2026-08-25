@@ -1,0 +1,19 @@
+texto = input("Ingrese un texto: ")
+
+frecuencia = {}
+
+texto = texto.lower()
+
+for letra in texto:
+    if letra != " ":
+        if letra in frecuencia:
+            frecuencia[letra] += 1
+        else:
+            frecuencia[letra] = 1
+
+resultado = sorted(frecuencia.items(), key=lambda x: x[1], reverse=True)
+
+print("\nFrecuencia de las letras:")
+
+for letra, cantidad in resultado:
+    print(letra, ":", cantidad)
