@@ -13,11 +13,11 @@ class Program
         agenda["Sofia"] = "3034567890";
 
         Console.Write("Ingrese el nombre del contacto: ");
-        string nombre = Console.ReadLine();
+        string nombre = Console.ReadLine() ?? "";
 
         if (agenda.ContainsKey(nombre))
         {
-            Console.WriteLine("El teléfono de " + nombre + " es: " + agenda[nombre]);
+            Console.WriteLine("El telefono de " + nombre + " es: " + agenda[nombre]);
         }
         else
         {
